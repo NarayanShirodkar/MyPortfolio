@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 
+import colors from "../constants/colors";
 import logo from "../images/Logo.png";
 
 const HeaderContainer = styled.header`
@@ -9,11 +10,11 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   height: auto;
-  margin: 10px 30px;
+  margin-top: 10px;
 `;
 
 const Logo = styled.img`
-  height: 100px;
+  height: 65px;
   width: auto;
 `;
 
@@ -30,7 +31,8 @@ const ListItem = styled.li`
   position: relative;
   padding: 6px 0;
   font-size: 18px;
-  font-weight: 700;
+  cursor: pointer;
+  /* font-weight: 700; */
 
   &::after {
     content: "";
@@ -38,13 +40,16 @@ const ListItem = styled.li`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: white;
+    height: 2px;
+    background: ${colors.theme};
     transform-origin: left;
     transform: scaleX(0);
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
   }
 
+  &:hover {
+    color: ${colors.theme};
+  }
   &:hover::after {
     transform: scaleX(1);
   }
