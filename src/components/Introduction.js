@@ -2,13 +2,13 @@ import React from "react";
 import { styled } from "styled-components";
 
 import colors from "../constants/colors";
-import footerLogo from "../images/footerLogo.png";
+import profilePhoto from "../images/profile.png";
 
 const IntroductionContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
   color: white;
   margin: 10px 20px;
 `;
@@ -22,6 +22,10 @@ const Name = styled.h1`
   margin: 10px 0;
   color: ${colors.theme};
   font-size: 40px;
+`;
+const ProfileImage = styled.img`
+  position: relative;
+  filter: drop-shadow(0 0 70px ${colors.theme});
 `;
 export default function Introduction() {
   return (
@@ -39,7 +43,7 @@ export default function Introduction() {
         </div>
       </div>
       <div>
-        <img src={footerLogo} />
+        <ProfileImage src={profilePhoto} alt="profile" />
       </div>
     </IntroductionContainer>
   );
