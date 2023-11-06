@@ -25,7 +25,7 @@ const Name = styled.h1`
 `;
 const ProfileImage = styled.img`
   position: relative;
-  filter: drop-shadow(0 0 70px ${colors.theme});
+  filter: drop-shadow(0 0 20px ${colors.theme});
 `;
 export default function Introduction() {
   return (
